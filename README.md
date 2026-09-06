@@ -23,7 +23,7 @@ A source-linked educational website about Dublin, the River Liffey, its bridges 
 
 ## Getting started
 
-Requires a browser and a local HTTP server. Python 3 provides one without installing application packages.
+Requires Git, a browser and a local HTTP server. Python 3 provides one without installing application packages.
 
 ```bash
 git clone https://github.com/SamOBrienOlinger/dublin-city-bridges-frontend.git
