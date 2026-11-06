@@ -27,53 +27,13 @@ A source-linked educational website about Dublin, the River Liffey, its bridges 
 
 The static site groups learning cards into sections on local history and engineering. Each card uses a key into the shared source directory. [Learning content and sources](assets/data/content.js)
 
-```mermaid
-erDiagram
-    accTitle: Know Dublin learning content
-    accDescr: Learning sections contain cards. Each card cites an entry in the source directory.
-    "Learning Section" ||--|{ "Learning Card" : contains
-    Source ||..o{ "Learning Card" : supports
-
-    "Learning Section" {
-        string id
-        string title
-    }
-    "Learning Card" {
-        string title
-        string scope
-        string source
-    }
-    Source {
-        string publisher
-        url url
-    }
-```
+[![Learning sections contain cards. Each card cites an entry in the source directory.](docs/diagrams/know-dublin-learning-content.svg)](docs/diagrams/know-dublin-learning-content.svg)
 
 ### Quiz
 
 A quiz run samples ten approved questions without repeats. Each question has four choices, a correct option index and a source link. The static site keeps the best score on the device. [Question bank](assets/data/questions.js) · [Quiz engine](assets/js/quiz-engine.js) · [Browser storage](assets/js/quiz.js)
 
-```mermaid
-erDiagram
-    accTitle: Know Dublin quiz data
-    accDescr: Quiz runs draw questions from the bank. Each question has four answer options and records the correct option index.
-    "Quiz Run" }o..|{ Question : draws
-    Question ||--|{ "Answer Option" : offers
-
-    "Quiz Run" {
-        number index
-        number score
-    }
-    Question {
-        string id
-        string topic
-        number correctIndex
-        url sourceUrl
-    }
-    "Answer Option" {
-        string text
-    }
-```
+[![Quiz runs draw questions from the bank. Each question has four answer options and records the correct option index.](docs/diagrams/know-dublin-quiz-data.svg)](docs/diagrams/know-dublin-quiz-data.svg)
 
 ## Getting started
 
